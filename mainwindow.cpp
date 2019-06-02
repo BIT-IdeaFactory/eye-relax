@@ -1,43 +1,29 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "timer.h"
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-//    QPixmap pix1("C:/Users/Eugen/Documents/QT/Photos/eye1.png");
-//    int w = ui->pix_label->width();
-//    int h = ui->pix_label->height();
-//    ui->pix_label->setPixmap(pix1.scaled(w,h,Qt::KeepAspectRatio));
-    QPixmap pix0("C:/Users/Eugen/Documents/QT/Photos/patryk.png");
-    int Pw = ui->PatrykLabel->width();
-    int Ph = ui->PatrykLabel->height();
-    ui->PatrykLabel->setPixmap(pix0.scaled(Pw,Ph,Qt::KeepAspectRatio));
-    // ui->PatrykLabel->setGeometry(20,3,28,28);
+    Timer *long_timer = new Timer(this);
 
-    QPixmap pix1("C:/Users/Eugen/Documents/QT/Photos/konrad.png");
-    int Kw = ui->KonradLabel->width();
-    int Kh = ui->KonradLabel->height();
-    ui->KonradLabel->setPixmap(pix1.scaled(Kw,Kh,Qt::KeepAspectRatio));
+    ui->clock->display("45:00");
 
-    QPixmap pix2("C:/Users/Eugen/Documents/QT/Photos/michal.png");
-    int Mw = ui->MichalLabel->width();
-    int Mh = ui->MichalLabel->height();
-    ui->MichalLabel->setPixmap(pix2.scaled(Mw,Mh,Qt::KeepAspectRatio));
+    long_timer->clock = ui->clock;
+    QTime working_interval(0,45,0);
+    long_timer->setWorkingInterval(working_interval);
+    long_timer->startWorking();
 
-    QPixmap pix3("C:/Users/Eugen/Documents/QT/Photos/stanislav1.png");
-    int Sw = ui->StanislavLabel->width();
-    int Sh = ui->StanislavLabel->height();
-    ui->StanislavLabel->setPixmap(pix3.scaled(Sw-5,Sh-5,Qt::KeepAspectRatio));
-
-    QPixmap pix4("C:/Users/Eugen/Documents/QT/Photos/eugene.png");
-    int Ew = ui->EugeneLabel->width();
-    int Eh = ui->EugeneLabel->height();
-    ui->EugeneLabel->setPixmap(pix4.scaled(Ew,Eh,Qt::KeepAspectRatio));
-
-    ui->clock->display("12:44");
+    QTimer *short_timer = new QTimer(this);
+    connect(short_timer, &QTimer::timeout, long_timer, &Timer::change_time);
+    short_timer->start(1000);
+    long_timer->change_time();
 }
+
+
 
 MainWindow::~MainWindow()
 {
@@ -83,6 +69,9 @@ void MainWindow::on_pbAbout_clicked()
     ui->stackedWidget->setCurrentIndex(3);
 }
 //End of MainWindow Buttons.
+
+
+
 
 
 

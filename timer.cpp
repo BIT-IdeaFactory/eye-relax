@@ -1,4 +1,5 @@
 #include "timer.h"
+#include "mainwindow.h"
 
 Timer::Timer(QObject *parent) : QObject(parent)
 {
@@ -27,6 +28,7 @@ QTime Timer::elapsed(QTime first,QTime second)
 void Timer::startWorking()
 {
     WorkTimer->start();
+
 }
 
 void Timer::setWorkingInterval(QTime arg)
@@ -43,6 +45,19 @@ void Timer::stopWorking()
 
 QTime Timer::remaining()
 {
-    return QTime(0,0, WorkTimer->remainingTime()/1000);
-
+    int time = WorkTimer->remainingTime()/1000;
+    return QTime(time/(60*60), time/60, time%60);
 }
+
+void Timer::change_time() {
+    QString text = remaining().toString("hh:mm:ss");
+    clock->display(text);
+}
+
+
+
+
+
+
+
+

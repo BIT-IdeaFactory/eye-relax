@@ -5,10 +5,13 @@
 #include <QTimer>
 #include <QDebug>
 #include <QTime>
+#include <QLCDNumber>
+#include <mainwindow.h>
 class Timer : public QObject
 {
     Q_OBJECT
 public:
+    QLCDNumber *clock;
     explicit Timer(QObject *parent = nullptr);
     void startWorking();
     void setWorkingInterval(QTime time);
@@ -20,10 +23,10 @@ private:
     void createWorkTimer();
     QTimer* WorkTimer;
 
+public slots:
+    void change_time();
 
 signals:
-
-public slots:
 
 };
 

@@ -157,7 +157,7 @@ background-color: rgb(33, 36, 45);</string>
        <item row="0" column="0">
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>3</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="ManuWidget">
           <layout class="QGridLayout" name="gridLayout_3">
@@ -415,22 +415,73 @@ background-color: rgb(33, 36, 45);</string>
               <item>
                <layout class="QVBoxLayout" name="verticalLayout">
                 <item>
-                 <widget class="QLabel" name="PatrykLabel">
+                 <widget class="QFrame" name="frame_7">
                   <property name="minimumSize">
                    <size>
                     <width>80</width>
                     <height>80</height>
                    </size>
                   </property>
-                  <property name="styleSheet">
-                   <string notr="true">border-radius: 0px; border-width: 0px;border-color: white;</string>
+                  <property name="maximumSize">
+                   <size>
+                    <width>200</width>
+                    <height>200</height>
+                   </size>
                   </property>
                   <property name="frameShape">
-                   <enum>QFrame::HLine</enum>
+                   <enum>QFrame::StyledPanel</enum>
                   </property>
-                  <property name="text">
-                   <string/>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
                   </property>
+                  <layout class="QGridLayout" name="gridLayout_4">
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="PatrykLabel">
+                     <property name="minimumSize">
+                      <size>
+                       <width>80</width>
+                       <height>80</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>100</width>
+                       <height>100</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border-radius: 0px; border-width: 0px;border-color: white;</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::HLine</enum>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="pixmap">
+                      <pixmap resource="eye-relax.qrc">:/Images/authors/patryk.png</pixmap>
+                     </property>
+                     <property name="scaledContents">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </widget>
                 </item>
                 <item>
@@ -475,21 +526,72 @@ background-color: rgb(33, 36, 45);</string>
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_2">
                 <item>
-                 <widget class="QLabel" name="EugeneLabel">
+                 <widget class="QFrame" name="frame_8">
                   <property name="minimumSize">
                    <size>
                     <width>80</width>
                     <height>80</height>
                    </size>
                   </property>
-                  <property name="styleSheet">
-                   <string notr="true">border-radius: 0px; border-width: 0px;border-color: white;
+                  <property name="maximumSize">
+                   <size>
+                    <width>200</width>
+                    <height>200</height>
+                   </size>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_5">
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="EugeneLabel">
+                     <property name="minimumSize">
+                      <size>
+                       <width>80</width>
+                       <height>80</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>100</width>
+                       <height>100</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border-radius: 0px; border-width: 0px;border-color: white;
 
 </string>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="pixmap">
+                      <pixmap resource="eye-relax.qrc">:/Images/authors/eugene.png</pixmap>
+                     </property>
+                     <property name="scaledContents">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </widget>
                 </item>
                 <item>
@@ -543,12 +645,24 @@ background-color: rgb(33, 36, 45);</string>
                     <height>80</height>
                    </size>
                   </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>100</height>
+                   </size>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true">border-radius: 0px; border-width: 0px;border-color: white;
 </string>
                   </property>
                   <property name="text">
                    <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap resource="eye-relax.qrc">:/Images/authors/stanislav1.png</pixmap>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -594,20 +708,71 @@ Shelemekh</string>
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_4">
                 <item>
-                 <widget class="QLabel" name="KonradLabel">
+                 <widget class="QFrame" name="frame_9">
                   <property name="minimumSize">
                    <size>
                     <width>80</width>
                     <height>80</height>
                    </size>
                   </property>
-                  <property name="styleSheet">
-                   <string notr="true">border-radius: 0px; border-width: 0px;border-color: white;
+                  <property name="maximumSize">
+                   <size>
+                    <width>200</width>
+                    <height>200</height>
+                   </size>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_6">
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="KonradLabel">
+                     <property name="minimumSize">
+                      <size>
+                       <width>80</width>
+                       <height>80</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>100</width>
+                       <height>100</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border-radius: 0px; border-width: 0px;border-color: white;
 </string>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="pixmap">
+                      <pixmap resource="eye-relax.qrc">:/Images/authors/konrad.png</pixmap>
+                     </property>
+                     <property name="scaledContents">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </widget>
                 </item>
                 <item>
@@ -652,20 +817,71 @@ Shelemekh</string>
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_5">
                 <item>
-                 <widget class="QLabel" name="MichalLabel">
+                 <widget class="QFrame" name="frame_10">
                   <property name="minimumSize">
                    <size>
                     <width>80</width>
                     <height>80</height>
                    </size>
                   </property>
-                  <property name="styleSheet">
-                   <string notr="true">border-radius: 0px; border-width: 0px;border-color: white;
+                  <property name="maximumSize">
+                   <size>
+                    <width>200</width>
+                    <height>200</height>
+                   </size>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_7">
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="MichalLabel">
+                     <property name="minimumSize">
+                      <size>
+                       <width>80</width>
+                       <height>80</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>100</width>
+                       <height>100</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border-radius: 0px; border-width: 0px;border-color: white;
 </string>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="pixmap">
+                      <pixmap resource="eye-relax.qrc">:/Images/authors/michal.png</pixmap>
+                     </property>
+                     <property name="scaledContents">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </widget>
                 </item>
                 <item>
@@ -835,6 +1051,8 @@ background-color: rgb(33, 36, 45);</string>
   <tabstop>pbAbout</tabstop>
   <tabstop>pbManu</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="eye-relax.qrc"/>
+ </resources>
  <connections/>
 </ui>
