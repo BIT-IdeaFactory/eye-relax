@@ -10,7 +10,7 @@ void Timer::createWorkTimer()
 {
     WorkTimer=new QTimer(this);
     setWorkingInterval(QTime(0,0));
-    WorkTimer->setTimerType(Qt::VeryCoarseTimer);
+    WorkTimer->setTimerType(Qt::PreciseTimer);
                                               //SLOT
     //connect(WorkTimer,SIGNAL(timeout()),this,SLOT()); //here we'll connect Patryk's window
 }
