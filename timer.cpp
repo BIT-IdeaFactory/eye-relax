@@ -12,7 +12,7 @@ void Timer::createWorkTimer()
     setWorkingInterval(QTime(0,0));
     WorkTimer->setTimerType(Qt::VeryCoarseTimer);
                                               //SLOT
-    //connect(WorkTimer,SIGNAL(timeout()),this,SLOT());
+    //connect(WorkTimer,SIGNAL(timeout()),this,SLOT()); //here we'll connect Patryk's window
 }
 
 QTime Timer::elapsed(QTime first,QTime second)

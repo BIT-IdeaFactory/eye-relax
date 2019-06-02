@@ -1,7 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
 #include <QMainWindow>
+#include <QApplication>
 
 namespace Ui {
 class MainWindow;
@@ -16,7 +16,6 @@ public:
     ~MainWindow();
 
 private slots:
-    void set_to_normal();
 
     void on_pbManu_clicked();
 
@@ -26,7 +25,18 @@ private slots:
 
     void on_pbAbout_clicked();
 
+    void on_pbNightDay_clicked();
+
+
 private:
+    bool night = true;
+    void change_about_text_color_night();
+    void change_settings_text_color_night();
+    void change_about_text_color_day();
+    void change_settings_text_color_day();
+    void set_to_normal_night();
+    void set_to_normal_day();
+
     Ui::MainWindow *ui;
 };
 
