@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/authors/eugene.png</file>
+        <file>Images/authors/konrad.png</file>
+        <file>Images/authors/michal.png</file>
+        <file>Images/authors/patryk.png</file>
+        <file>Images/authors/stanislav1.png</file>
+        <file>Images/buttons/day-button.png</file>
+        <file>Images/buttons/night-button.png</file>
+    </qresource>
+</RCC>
