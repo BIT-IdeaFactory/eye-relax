@@ -436,7 +436,7 @@ background-color: rgb(40, 44, 53);</string>
              </property>
              <property name="icon">
               <iconset resource="eye-relax.qrc">
-               <normaloff>:/Images/buttons/night-button.png</normaloff>:/Images/buttons/night-button.png</iconset>
+               <normaloff>:/images/buttons/night-button.png</normaloff>:/images/buttons/night-button.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -818,7 +818,7 @@ background-color: rgb(40, 44, 53);</string>
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap resource="eye-relax.qrc">:/Images/authors/patryk.png</pixmap>
+                      <pixmap>:/Images/authors/patryk.png</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -862,7 +862,7 @@ background-color: rgb(40, 44, 53);</string>
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap resource="eye-relax.qrc">:/Images/authors/konrad.png</pixmap>
+                      <pixmap>:/Images/authors/konrad.png</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -958,7 +958,7 @@ background-color: rgb(40, 44, 53);</string>
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap resource="eye-relax.qrc">:/Images/authors/stanislav1.png</pixmap>
+                      <pixmap>:/Images/authors/stanislav1.png</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -1028,7 +1028,7 @@ Shelemekh</string>
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap resource="eye-relax.qrc">:/Images/authors/michal.png</pixmap>
+                      <pixmap>:/Images/authors/michal.png</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -1100,7 +1100,7 @@ Shelemekh</string>
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap resource="eye-relax.qrc">:/Images/authors/eugene.png</pixmap>
+                      <pixmap>:/Images/authors/eugene.png</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>

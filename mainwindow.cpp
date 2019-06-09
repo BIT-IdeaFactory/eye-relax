@@ -165,7 +165,7 @@ void MainWindow::on_pbNightDay_clicked()
 
     QIcon icon;
       if(night==true){
-        icon.addFile(QString::fromUtf8(":/Images/buttons/night-button.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8(":/images/buttons/night-button.png"), QSize(), QIcon::Normal, QIcon::Off);
         ui->pbNightDay->setIcon(icon);
         ui->pbNightDay->setIconSize(QSize(80, 80));
 
@@ -184,7 +184,7 @@ void MainWindow::on_pbNightDay_clicked()
      }
     else {
 
-         icon.addFile(QString::fromUtf8(":/Images/buttons/day-button.png"), QSize(), QIcon::Normal, QIcon::Off);
+         icon.addFile(QString::fromUtf8(":/images/buttons/day-button.png"), QSize(), QIcon::Normal, QIcon::Off);
          ui->pbNightDay->setIcon(icon);
          ui->pbNightDay->setIconSize(QSize(80, 80));
 
