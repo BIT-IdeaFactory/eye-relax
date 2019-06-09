@@ -13,17 +13,14 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     long_timer->clock = ui->clock;
-    connect(ui->startButton,SIGNAL(clicked()),long_timer,SLOT(startWorking()));
-    connect(ui->timeEdit,SIGNAL(timeChanged(QTime)),long_timer,SLOT(setWorkingInterval(QTime)));
-
+    QTime working_interval(0,45,0);
+    long_timer->setWorkingInterval(working_interval);
+    long_timer->startWorking();
 
     QTimer *short_timer = new QTimer(this);
     connect(short_timer, &QTimer::timeout, long_timer, &Timer::change_time);
     short_timer->start(1000);
     long_timer->change_time();
-
-
-
 
 
     if(night==true){
@@ -63,26 +60,22 @@ void MainWindow:: change_about_text_color_day()
     ui->label_text_michal->setStyleSheet("QLabel{color: rgb(50, 42, 83); border-width: 0px; font: bold 11px; padding: 6px;}");
     ui->label_text_konrad->setStyleSheet("QLabel{color:rgb(50, 42, 83); border-width: 0px; font: bold 11px; padding: 6px;}");
     ui->label_text_info->setStyleSheet("QLabel{ color: rgb(50, 42, 83); border-width: 0px; font: bold 11px; padding: 6px;}");
-
 }
 
 void MainWindow::change_settings_text_color_day()
 {
     ui->label_text_NightDay->setStyleSheet("QLabel{color: rgb(50, 42, 83);; border-width: 0px; font: bold 20px; padding: 6px;}");
     ui->label_text_SetTime->setStyleSheet("QLabel{color: rgb(50, 42, 83);; border-width: 0px; font: bold 20px; padding: 6px;}");
+    ui->lineEdit_time->setStyleSheet("QLineEdit{color:rgb(50, 42, 83); background-color:white; border-radius: 15px; border-style: outset;border-width: 3px;border-color: rgb(49, 235, 167);font: bold 15px;}");
     ui->label_text_NightDay->setText(" day version");
-    ui->timeEdit->setStyleSheet("QTimeEdit{color: rgb(50, 42, 83);; border-width: 0px; font: bold 20px; padding: 6px;background-color: white}");
-    ui->startButton->setStyleSheet("QPushButton{color: rgb(50, 42, 83);; border-width: 0px; font: bold 20px; padding: 6px;background->color: white}");
 }
 
 void MainWindow::change_settings_text_color_night()
 {
     ui->label_text_NightDay->setStyleSheet("QLabel{color: rgb(18, 18, 18); border-width: 0px; font: bold 20px; padding: 6px;}");
     ui->label_text_SetTime->setStyleSheet("QLabel{color: rgb(18, 18, 18); border-width: 0px; font: bold 20px; padding: 6px;}");
+    ui->lineEdit_time->setStyleSheet("QLineEdit{color: rgb(76, 121, 206); background-color: rgb(25, 28, 35); border-radius: 15px; border-style: outset;border-width: 3px;border-color: rgb(76, 121, 206);font: bold 15px;}");
     ui->label_text_NightDay->setText("night version");
-    ui->timeEdit->setStyleSheet("QTimeEdit{color: rgb(18, 18, 18); border-width: 0px; font: bold 20px; padding: 6px;background-color:rgb(33, 36, 45);}");
-    ui->startButton->setStyleSheet("QPushButton{color: rgb(18, 18, 18); border-width: 0px; font: bold 20px; padding: 6px;background-color:rgb(33, 36, 45);}");
-
 }
 
 void MainWindow:: change_about_text_color_night()
@@ -178,9 +171,7 @@ void MainWindow::on_pbNightDay_clicked()
         ui->frameTop->setStyleSheet("QFrame{ border-color: rgb(0, 0, 0);border-width : 1.2px;border-style:inset;background-color: rgb(33, 36, 45); }");
         ui->label_text_top->setStyleSheet("QLabel{color: rgb(76, 121, 206); font: bold 15px; padding: 6px;  font: italic 15px;border-width: 0px;}");
         ui->clock->setStyleSheet("QLCDNumber{ color: white; background-color: rgb(25, 28, 35); border-radius: 40px; border-style: outset;border-width: 7px;border-color: rgb(76, 121, 206);}");
-        //ui->timeEdit->setStyleSheet("QTimeEdit{color: rgb(18, 18, 18); border-width: 0px; font: bold 20px; padding: 6px;background-color:rgb(33, 36, 45);}");
-
-     }
+    }
     else {
 
          icon.addFile(QString::fromUtf8(":/Images/buttons/day-button.png"), QSize(), QIcon::Normal, QIcon::Off);
@@ -197,7 +188,7 @@ void MainWindow::on_pbNightDay_clicked()
          ui->frameTop->setStyleSheet("QFrame{ border-color: rgb(49, 235, 167);border-bottom-width : 3px;border-style:inset; background-color:rgb(239, 242, 247);background-color:rgb(91, 81, 119);background-color:rgb(50, 42, 83);}");
          ui->label_text_top->setStyleSheet("QLabel{color: rgb(49, 235, 167); font: bold 15px; padding: 6px;  font: italic 15px;border-width: 0px;}");
          ui->clock->setStyleSheet("QLCDNumber{ color:rgb(91, 81, 119); color:rgb(50, 42, 83); background-color: white; border-radius: 40px; border-style: outset;border-width: 7px;border-color: rgb(49, 235, 167);}");
-         //ui->timeEdit->setStyleSheet("QTimeEdit{color: rgb(50, 42, 83);; border-width: 0px; font: bold 20px; padding: 6px;background-color: white}");
+
     }
 
     ui->AboutWidget->setStyleSheet("QLabel{text-color:black;}");
