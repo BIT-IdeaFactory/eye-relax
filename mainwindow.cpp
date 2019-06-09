@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include "timer.h"
 #include <QApplication>
+#include "exercise.h"
+#include "kolo.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -10,8 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     Timer *long_timer = new Timer(this);
-
-
+    long_timer->connect_signal(this);
     long_timer->clock = ui->clock;
     connect(ui->startButton,SIGNAL(clicked()),long_timer,SLOT(startWorking()));
     connect(ui->timeEdit,SIGNAL(timeChanged(QTime)),long_timer,SLOT(setWorkingInterval(QTime)));
@@ -202,5 +203,11 @@ void MainWindow::on_pbNightDay_clicked()
 
     ui->AboutWidget->setStyleSheet("QLabel{text-color:black;}");
 
+}
 
+void MainWindow::start_exercise() {
+    emit exercise_started();
+    Exercise *exercise_window = new Exercise;
+    exercise_window->setParent(this);
+    exercise_window->show();
 }

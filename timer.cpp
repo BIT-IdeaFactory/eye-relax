@@ -11,8 +11,7 @@ void Timer::createWorkTimer()
     WorkTimer=new QTimer(this);
     setWorkingInterval(QTime(0,0));
     WorkTimer->setTimerType(Qt::PreciseTimer);
-                                              //SLOT
-    //connect(WorkTimer,SIGNAL(timeout()),this,SLOT()); //here we'll connect Patryk's window
+     //here we'll connect Patryk's window
 }
 
 QTime Timer::elapsed(QTime first,QTime second)
@@ -54,7 +53,10 @@ void Timer::change_time() {
     clock->display(text);
 }
 
-
+void Timer::connect_signal(MainWindow *ui) {
+    connect(WorkTimer,SIGNAL(timeout()),ui, SLOT(start_exercise()));
+    connect(ui, SIGNAL(exercise_started()), this, SLOT(stopWorking()));
+}
 
 
 

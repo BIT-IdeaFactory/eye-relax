@@ -16,6 +16,7 @@ public:
     ~MainWindow();
 
 private slots:
+    void start_exercise();
 
     void on_pbManu_clicked();
 
@@ -27,7 +28,6 @@ private slots:
 
     void on_pbNightDay_clicked();
 
-
 private:
     bool night = true;
     void change_about_text_color_night();
@@ -38,6 +38,9 @@ private:
     void set_to_normal_day();
 
     Ui::MainWindow *ui;
+signals:
+    void exercise_started();
+
 };
 
 #endif // MAINWINDOW_H

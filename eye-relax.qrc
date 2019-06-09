@@ -1,11 +1,16 @@
 <RCC>
     <qresource prefix="/">
-        <file>Images/authors/eugene.png</file>
-        <file>Images/authors/konrad.png</file>
-        <file>Images/authors/michal.png</file>
-        <file>Images/authors/patryk.png</file>
-        <file>Images/authors/stanislav1.png</file>
-        <file>Images/buttons/day-button.png</file>
-        <file>Images/buttons/night-button.png</file>
+        <file>images/authors/eugene.png</file>
+        <file>images/authors/konrad.png</file>
+        <file>images/authors/michal.png</file>
+        <file>images/authors/patryk.png</file>
+        <file>images/authors/stanislav1.png</file>
+        <file>images/buttons/day-button.png</file>
+        <file>images/buttons/night-button.png</file>
+        <file>images/buttons/left.png</file>
+        <file>images/buttons/right.png</file>
+        <file>sounds/beep.wav</file>
+        <file>images/eye/closed.png</file>
+        <file>images/eye/opened.png</file>
     </qresource>
 </RCC>

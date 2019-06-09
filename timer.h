@@ -13,8 +13,8 @@ class Timer : public QObject
 public:
     QLCDNumber *clock;
     explicit Timer(QObject *parent = nullptr);
-    void stopWorking();
     QTime remaining();
+    void connect_signal(MainWindow *ui);
     static QTime elapsed(QTime first,QTime second);
 private:
     QTime workingTime;
@@ -25,6 +25,7 @@ public slots:
     void change_time();
     void startWorking();
     void setWorkingInterval(QTime time);
+    void stopWorking();
 
 signals:
 

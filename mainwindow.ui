@@ -424,8 +424,8 @@ background-color: rgb(40, 44, 53);</string>
              </property>
              <property name="maximumSize">
               <size>
-               <width>146</width>
-               <height>86</height>
+               <width>83</width>
+               <height>42</height>
               </size>
              </property>
              <property name="styleSheet">
