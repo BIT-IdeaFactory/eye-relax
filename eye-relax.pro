@@ -14,7 +14,7 @@ CONFIG += c++11
 
 FORMS += \
     mainwindow.ui \
-    exercise.ui
+    exercise.ui \
 
 HEADERS += \
     exercise.h \
