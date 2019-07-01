@@ -45,7 +45,7 @@ void Timer::stopWorking()
 QTime Timer::remaining()
 {
     int time = WorkTimer->remainingTime()/1000;
-    return QTime(time/(60*60), time/60, time%60);
+    return QTime(time/(3600), (time%3600)/60, (time%3600)%60);
 }
 
 void Timer::change_time() {

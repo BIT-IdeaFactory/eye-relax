@@ -4,7 +4,7 @@
 #include <QApplication>
 #include "exercise.h"
 #include "kolo.h"
-
+#include <QDebug>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
