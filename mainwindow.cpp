@@ -5,7 +5,6 @@
 #include "exercise.h"
 #include "kolo.h"
 
-
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -16,6 +15,14 @@ MainWindow::MainWindow(QWidget *parent) :
     long_timer->clock = ui->clock;
     connect(ui->startButton,SIGNAL(clicked()),long_timer,SLOT(startWorking()));
     connect(ui->timeEdit,SIGNAL(timeChanged(QTime)),long_timer,SLOT(setWorkingInterval(QTime)));
+
+    saver=new Saver(this);
+    saver->exists();
+    if(saver->getChecked())
+    {
+        connect(ui->startButton,SIGNAL(clicked()),this,SLOT(time_changed()));
+        ui->timeEdit->setTime(saver->getTTime());
+    }
 
 
     QTimer *short_timer = new QTimer(this);
@@ -211,3 +218,10 @@ void MainWindow::start_exercise() {
     exercise_window->setParent(this);
     exercise_window->show();
 }
+
+void MainWindow::time_changed()
+{
+    QTime t=ui->timeEdit->time();
+    saver->save(t.toString());
+}
+

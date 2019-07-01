@@ -1,6 +1,5 @@
 #include "kolo.h"
 #include <math.h>
-#include <windows.h>
 
 
 #define rozX 50

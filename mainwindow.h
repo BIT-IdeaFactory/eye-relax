@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 #include <QMainWindow>
 #include <QApplication>
+#include "saver.h"
 
 namespace Ui {
 class MainWindow;
@@ -28,8 +29,11 @@ private slots:
 
     void on_pbNightDay_clicked();
 
+    void time_changed();
+
 private:
     bool night = true;
+    Saver* saver;
     void change_about_text_color_night();
     void change_settings_text_color_night();
     void change_about_text_color_day();

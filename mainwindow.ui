@@ -534,8 +534,8 @@ background-color: rgb(40, 44, 53);</string>
              </property>
              <property name="minimumSize">
               <size>
-               <width>100</width>
-               <height>60</height>
+               <width>200</width>
+               <height>100</height>
               </size>
              </property>
              <property name="maximumSize">
@@ -818,7 +818,7 @@ background-color: rgb(40, 44, 53);</string>
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap resource="eye-relax.qrc">:/images/authors/patryk.png</pixmap>
+                      <pixmap>:/Images/authors/patryk.png</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -862,7 +862,7 @@ background-color: rgb(40, 44, 53);</string>
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap resource="eye-relax.qrc">:/images/authors/konrad.png</pixmap>
+                      <pixmap>:/Images/authors/konrad.png</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -958,7 +958,7 @@ background-color: rgb(40, 44, 53);</string>
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap resource="eye-relax.qrc">:/images/authors/stanislav1.png</pixmap>
+                      <pixmap>:/Images/authors/stanislav1.png</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -1028,7 +1028,7 @@ Shelemekh</string>
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap resource="eye-relax.qrc">:/images/authors/michal.png</pixmap>
+                      <pixmap>:/Images/authors/michal.png</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -1100,7 +1100,7 @@ Shelemekh</string>
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap resource="eye-relax.qrc">:/images/authors/eugene.png</pixmap>
+                      <pixmap>:/Images/authors/eugene.png</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
