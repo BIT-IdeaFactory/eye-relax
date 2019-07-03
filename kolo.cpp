@@ -7,7 +7,7 @@
 
 
 
-Kolo::Kolo()
+Kolo::Kolo(QWidget* parent) : QWidget (parent) //constructor was changed,previously: Kolo::Kolo()
 {
 
     this->setFocus();

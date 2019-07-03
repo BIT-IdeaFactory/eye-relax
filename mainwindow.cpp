@@ -2,9 +2,9 @@
 #include "ui_mainwindow.h"
 #include "timer.h"
 #include <QApplication>
-#include "exercise.h"
 #include "kolo.h"
 #include <QDebug>
+#include <dialog.h>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -214,9 +214,8 @@ void MainWindow::on_pbNightDay_clicked()
 
 void MainWindow::start_exercise() {
     emit exercise_started();
-    Exercise *exercise_window = new Exercise;
-    exercise_window->setParent(this);
-    exercise_window->show();
+    Dialog* d=new Dialog();
+    d->exec();
 }
 
 void MainWindow::time_changed()

@@ -14,23 +14,24 @@ CONFIG += c++11
          console
 
 FORMS += \
+    dialog.ui \
     mainwindow.ui \
     exercise.ui
 
 HEADERS += \
-    exercise.h \
+    dialog.h \
     kolo.h \
     mainwindow.h \
     saver.h \
     timer.h
 
 SOURCES += \
+    dialog.cpp \
     mainwindow.cpp \
     saver.cpp \
     timer.cpp \
     kolo.cpp \
-    main.cpp \
-    exercise.cpp
+    main.cpp
 
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin

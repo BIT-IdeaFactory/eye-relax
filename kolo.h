@@ -19,7 +19,7 @@ class Kolo : public QWidget
     Q_OBJECT
 
 public:
-    Kolo();
+    explicit Kolo(QWidget* parent);
     ~Kolo();
     int wybor=0;
     void keyPressEvent(QKeyEvent *Event);
